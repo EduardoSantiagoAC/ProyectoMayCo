@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Compras al Mayoreo</title>
+    <link rel="stylesheet" href="diseño.css"> 
+    <style>
+
+        body {
+            background-image: url('imagenes/Fondo2D.png'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; /
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+        }
+
+        .right-section button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; 
+        }
+
+        .image-container img {
+            width: 24%; /
+            border-radius: 10px; 
+        }
+
+        
+        .icon-buttons button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .slider .slide img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .button-link {
+            padding: 5px 10px;
+            cursor: pointer;
+            text-decoration: none; 
+            background-color: #0066cc; 
+            color: white; 
+            border-radius: 4px; 
+            display: inline-block; 
+        }
+        .button-link:hover {
+            background-color: #005c99; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MayCo</h1>
+        <div class="right-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <button>Botón 1</button>
+            <button>Botón 2</button>
+            <button onclick="window.location.href='InicioS/inicio-sesion.html'">Iniciar Sesión</button> 
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="Imgprincipales/1.png" alt="Imagen 1">
+        <img src="Imgprincipales/2.png" alt="Imagen 2">
+        <img src="Imgprincipales/3.png" alt="Imagen 3">
+        <img src="Imgprincipales/4.png" alt="Imagen 4">
+    </div>
+
+    <h2>Categorías en tendencia</h2>
+
+    <div class="icon-buttons">
+        <button>
+            <img src="imagenes/1B.png" alt="Icono 1">
+            Accesorios
+        </button>
+        <button>
+            <img src="imagenes/2B.png" alt="Icono 2">
+            Taladros
+        </button>
+        <button>
+            <img src="imagenes/3B.png" alt="Icono 3">
+            Manguera
+        </button>
+        <button>
+            <img src="imagenes/4B.png" alt="Icono 4">
+            Lima Manual
+        </button>
+    </div>
+
+    <h2>OTROS ARTICULOS QUE PODRÍAN INTERESARTE</h2>
+
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="imagenes/1A.png" alt="Slide 1"></div>
+            <div class="slide"><img src="imagenes/2A.png" alt="Slide 2"></div>
+            <div class="slide"><img src="imagenes/3A.png" alt="Slide 3"></div>
+            <div class="slide"><img src="imagenes/4A.png" alt="Slide 4"></div>
+
+            <div class="slide"><img src="imagenes/5A.png" alt="Slide 1"></div>
+            <div class="slide"><img src="imagenes/6A.png" alt="Slide 2"></div>
+            <div class="slide"><img src="imagenes/7A.png" alt="Slide 4"></div>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+    </div>
+
+</body>
+</html>
