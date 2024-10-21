@@ -6,95 +6,36 @@
     <title>Página de Compras al Mayoreo</title>
     <link rel="stylesheet" href="diseño.css"> 
     <style>
+        /* Estilos existentes... */
 
-        body {
-            background-image: url('imagenes/Fondo2D.png'); 
-            background-size: cover;
-            background-position: center; 
-            background-repeat: no-repeat; /
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        
-        .right-section {
-            display: flex;
-            align-items: center;
-            gap: 10px; 
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .search-bar input {
-            padding: 5px;
-        }
-
-        .search-bar button {
-            padding: 5px 10px;
-        }
-
-        .right-section button {
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px; 
-        }
-
-        .image-container img {
-            width: 24%; /
-            border-radius: 10px; 
-        }
-
-        
-        .icon-buttons button {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 10px;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        
-        .slider {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            gap: 10px;
+        /* Estilos para el carrito de compras */
+        #cart-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            background-color: white;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
         }
 
-        .slider .slide img {
-            width: 150px;
-            border-radius: 10px;
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .buttons-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 15px;
+        #cart-items li {
+            margin: 10px 0;
         }
 
-        .button-link {
-            padding: 5px 10px;
+        #checkout-btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
             cursor: pointer;
-            text-decoration: none; 
-            background-color: #0066cc; 
-            color: white; 
-            border-radius: 4px; 
-            display: inline-block; 
-        }
-        .button-link:hover {
-            background-color: #005c99; 
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -123,21 +64,17 @@
     <h2>Categorías en tendencia</h2>
 
     <div class="icon-buttons">
-        <button>
-            <img src="imagenes/1B.png" alt="Icono 1">
-            Accesorios
+        <button onclick="addToCart({name: 'Accesorios', price: 100})">
+            <img src="imagenes/1B.png" alt="Icono 1"> Accesorios
         </button>
-        <button>
-            <img src="imagenes/2B.png" alt="Icono 2">
-            Taladros
+        <button onclick="addToCart({name: 'Taladros', price: 200})">
+            <img src="imagenes/2B.png" alt="Icono 2"> Taladros
         </button>
-        <button>
-            <img src="imagenes/3B.png" alt="Icono 3">
-            Manguera
+        <button onclick="addToCart({name: 'Manguera', price: 50})">
+            <img src="imagenes/3B.png" alt="Icono 3"> Manguera
         </button>
-        <button>
-            <img src="imagenes/4B.png" alt="Icono 4">
-            Lima Manual
+        <button onclick="addToCart({name: 'Lima Manual', price: 30})">
+            <img src="imagenes/4B.png" alt="Icono 4"> Lima Manual
         </button>
     </div>
 
@@ -156,11 +93,64 @@
         </div>
     </div>
 
+    <!-- Contenedor del carrito de compras -->
+    <div id="cart-container">
+        <h2>Tu carrito de compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">0</span></p>
+        <button id="checkout-btn">Ir a Pagar</button>
+    </div>
+
     <div class="buttons-container">
         <button>Botón 1</button>
         <button>Botón 2</button>
-        <button>Botón 3</button>
+        
+        <button onclick="toggleCart()">Ver Carrito</button>
     </div>
+
+    <script>
+        let cart = [];
+
+        // Función para añadir productos al carrito
+        function addToCart(product) {
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartDisplay();
+        }
+
+        // Función para mostrar el carrito de compras
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.innerText = `${item.name} - $${item.price}`;
+                cartItems.appendChild(listItem);
+
+                total += item.price;
+            });
+
+            cartTotal.innerText = total.toFixed(2);
+        }
+
+        // Función para abrir/cerrar el carrito
+        function toggleCart() {
+            const cartContainer = document.getElementById('cart-container');
+            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Cargar carrito desde el localStorage al cargar la página
+        window.onload = function() {
+            const storedCart = localStorage.getItem("cart");
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+                updateCartDisplay();
+            }
+        }
+    </script>
 
 </body>
 </html>
