@@ -131,27 +131,27 @@ button:active {
 /* --------------------------------------------------hasta aca*/
 button {
     display: flex;
-    flex-direction: column; /* Coloca la imagen arriba y el texto debajo */
+    flex-direction: column; 
     align-items: center;
     padding: 20px; /* Reduce el padding para un ajuste más compacto */
-    background-color: white; /* Color de fondo blanco */
-    color: rgba(0, 0, 0, 0.7); /* Cambiado a negro semitransparente */
+    background-color: white; 
+    color: rgba(0, 0, 0, 0.7); 
 
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
-    gap: 10px; /* Espacio entre imagen y texto */
-    width: 150px; /* Tamaño fijo para el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    gap: 10px; 
+    width: 150px; 
 }
 
 button img {
-    width: 220px;  /* Ajusta el tamaño de la imagen para que sea más grande */
+    width: 220px;  
     height: auto;
     object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
 }
 
-/* Cambiar color al pasar el cursor */
+
 button:hover {
     background-color: #f0f0f0; /* Color de fondo más claro al pasar el cursor */
     transform: scale(1.05); /* Efecto de zoom */
