@@ -10,7 +10,7 @@ body {
 header {
     width: 100%;
     padding: 10px;
-    background-color: rgb(0, 0, 0); /* Cambiado a negro semitransparente */
+    background-color: rgb(0, 0, 0); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,13 +42,13 @@ header input[type="text"] {
 header button {
     padding: 6px 12px;
     background-color: white;
-    color: rgba(0, 0, 0, 0.7); /* Cambiado a negro semitransparente */
+    color: rgba(0, 0, 0, 0.7); 
     border: none;
     cursor: pointer;
 }
 
 header button:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Cambiado a negro más oscuro al pasar el cursor */
+    background-color: rgba(0, 0, 0, 0.9); 
 }
 
 .image-container {
@@ -78,22 +78,22 @@ header button:hover {
 
 .buttons-container button {
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Cambiado a negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.7); 
     color: white;
     border: none;
     cursor: pointer;
 }
 
 .buttons-container button:hover {
-    background-color: rgba(192, 247, 255, 0.8); /* Color semitransparente al pasar el cursor */
+    background-color: rgba(192, 247, 255, 0.8); 
 }
 
 
-/* de aquiiii ---------------------------------------------------------------------------- */
+
 .icon-buttons {
     display: flex;
-    justify-content: center; /* Centra los botones en la página */
-    gap: 15px; /* Espacio entre los botones */
+    justify-content: center;
+    gap: 15px; 
     padding: 20px;
 }
 
@@ -102,93 +102,93 @@ button {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Cambiado a negro semitransparente */
-    border: none; /* Sin borde */
-    border-radius: 50%; /* Bordes completamente redondeados */
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: none; 
+    border-radius: 50%; 
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 70px; /* Tamaño del botón */
-    height: 70px; /* Tamaño del botón */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: 70px; 
+    height: 70px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 button img {
-    width: 40px;  /* Tamaño ajustado para los iconos */
+    width: 40px;  
     height: auto;
-    object-fit: contain; /* Asegura que la imagen no se deforme */
+    object-fit: contain; 
 }
 
 button:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
-/* Opcional: estilo adicional para personalizar los botones */
+
 button:active {
-    transform: scale(1.05); /* Pequeña reducción de tamaño al hacer clic */
+    transform: scale(1.05); 
 }
 
 
-/* --------------------------------------------------hasta aca*/
+
 button {
     display: flex;
-    flex-direction: column; /* Coloca la imagen arriba y el texto debajo */
+    flex-direction: column; 
     align-items: center;
-    padding: 20px; /* Reduce el padding para un ajuste más compacto */
-    background-color: white; /* Color de fondo blanco */
-    color: rgba(0, 0, 0, 0.7); /* Cambiado a negro semitransparente */
+    padding: 20px; 
+    background-color: white; 
+    color: rgba(0, 0, 0, 0.7); 
 
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
-    gap: 10px; /* Espacio entre imagen y texto */
-    width: 150px; /* Tamaño fijo para el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    gap: 10px; 
+    width: 150px; 
 }
 
 button img {
-    width: 220px;  /* Ajusta el tamaño de la imagen para que sea más grande */
+    width: 220px;  
     height: auto;
-    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+    object-fit: contain; 
 }
 
-/* Cambiar color al pasar el cursor */
+
 button:hover {
-    background-color: #f0f0f0; /* Color de fondo más claro al pasar el cursor */
-    transform: scale(1.05); /* Efecto de zoom */
+    background-color: #f0f0f0; 
+    transform: scale(1.05); 
 }
 
-/* Texto debajo de la imagen */
+
 button span {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
-    color: #9acbde; /* Color verde del texto */
+    color: #9acbde; 
     text-transform: lowercase;
-    letter-spacing: 2px; /* Espaciado entre letras */
+    letter-spacing: 2px; 
 }
 
-/* Efecto de sombra en el header (opcional si tienes header) */
+
 header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Degradado negro semitransparente */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); 
 }
 
 
-/* --------------------------------------------------hasta aca*/
 
 
 
 
 
-/* Añadir sombras a los contenedores de imagen */
+
+
 .image-container {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
 }
 
 
 
-/* Hacer más elegantes las barras de búsqueda */
+
 header input[type="text"] {
     padding: 8px;
     border-radius: 5px;
@@ -201,7 +201,7 @@ header input[type="text"]:focus {
     outline: none;
 }
 
-/* Modernizar los botones */
+
 header button, .buttons-container button {
     border-radius: 5px;
     font-weight: bold;
@@ -209,11 +209,11 @@ header button, .buttons-container button {
 }
 
 header button:hover, .buttons-container button:hover {
-    background-color: rgba(156, 255, 243, 0.8); /* Color semitransparente al pasar el cursor */
+    background-color: rgba(156, 255, 243, 0.8); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Slider CSS */
+
 .slider {
     width: 75vw;
     height: auto; 
@@ -237,8 +237,8 @@ header button:hover, .buttons-container button:hover {
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    50% { transform: translateX(-800px); } /* Desplazarse a la mitad */
-    100% { transform: translateX(0); } /* Regresar a la posición inicial */
+    50% { transform: translateX(-800px); } 
+    100% { transform: translateX(0); } 
 }
 
 * {
@@ -253,7 +253,7 @@ h2 {
 }
 
 .slider-frame {
-    width: 75vw; /* Ajuste el ancho a un 75% del viewport */
+    width: 75vw; 
     height: auto;
     margin: 50px auto;
     overflow: hidden;
@@ -263,7 +263,7 @@ h2 {
 .slider-frame ul {
     display: flex;
     padding: 0;
-    width: 400%; /* Asegura que haya suficiente espacio para las imágenes */
+    width: 400%; 
     animation: slide 30s infinite alternate ease-in-out;
 }
 
@@ -273,7 +273,7 @@ h2 {
 }
 
 .slider-frame img {
-    width: 100%; /* Asegura que las imágenes llenen completamente su contenedor */
+    width: 100%; 
 }
 
 @keyframes slide {
