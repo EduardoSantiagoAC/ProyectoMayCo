@@ -119,7 +119,7 @@ button img {
 }
 
 button:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1); /* Efecto zoom */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
@@ -133,7 +133,7 @@ button {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    padding: 20px; /* Reduce el padding para un ajuste más compacto */
+    padding: 20px; /* ajuste compacto */
     background-color: white; 
     color: rgba(0, 0, 0, 0.7); 
 
@@ -148,13 +148,13 @@ button {
 button img {
     width: 220px;  
     height: auto;
-    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+    object-fit: contain; /* Ajuste sin deformarse */
 }
 
 
 button:hover {
     background-color: #f0f0f0; /* Color de fondo más claro al pasar el cursor */
-    transform: scale(1.05); /* Efecto de zoom */
+    transform: scale(1.05); /* Efecto zoom */
 }
 
 
